@@ -11,6 +11,9 @@ const reservation_controller = require("./controllers/reservation_controller")
 const customer_controller = require("./controllers/customer_controller")
 const food_controller = require("./controllers/food_controller")
 const order_controller = require("./controllers/order_controller")
+const vehicle_controller = require("./controllers/vehicle_controller")
+const transport_controller = require("./controllers/transport_controller")
+
 
 const db_url = "mongodb://localhost:27017/hotel_management_system"
 const port = 8080
@@ -62,7 +65,8 @@ const StartServer = () => {
    router.use("/customer-controller", customer_controller)
    router.use("/food-controller", food_controller)
    router.use("/order-controller", order_controller)
-
+   router.use("/vehicle-controller", vehicle_controller)
+   router.use("/transport-controller", transport_controller)
    /** Healthcheck */
    router.get('/ping', (req, res, next) => res.status(200).json({ hello: 'world' }));
 
