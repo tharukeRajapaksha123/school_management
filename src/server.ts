@@ -5,6 +5,9 @@ import Logging from "./library/Loggin"
 
 const router = express()
 
+/**constorllers */
+const employ_controller = require("./controllers/employee_controller")
+
 
 const db_url = "mongodb://localhost:27017/hotel_management_system"
 const port = 8080
@@ -51,7 +54,7 @@ const StartServer = () => {
    });
 
    /** Routes */
-
+   router.use("/employee-manager", employ_controller)
 
    /** Healthcheck */
    router.get('/ping', (req, res, next) => res.status(200).json({ hello: 'world' }));
