@@ -7,6 +7,7 @@ export interface IEmployee {
    salary: number,
    nic_number: string,
    transaction_date: Date,
+   role: string
 }
 
 export interface IEmployeeModel extends IEmployee, Document { }
@@ -19,6 +20,7 @@ const EmployeeSchema: Schema = new Schema(
       salary: { type: Number, required: true },
       nic_number: { type: String, required: true },
       transaction_date: { type: Date, default: null, required: true },
+      role: { type: String, required: true }
    }
    , {
       versionKey: false
