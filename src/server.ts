@@ -9,7 +9,7 @@ const router = express()
 const employ_controller = require("./controllers/employee_controller")
 const reservation_controller = require("./controllers/reservation_controller")
 
-const db_url = "mongodb://localhost:27017/hotel_management_system"
+const db_url = "mongodb://db-itp:u9i7EW85Ez9N2fZRFvHOXTZG8B5jbX5zzMrAcM0ciTYbU11fKVXbOHKiVZzkiQr54Qe8X4XdPqwlDPekPANqFw%3D%3D@db-itp.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@db-itp@"
 const port = 8080
 /* Connect to Mongo */
 mongoose.connect(db_url)
