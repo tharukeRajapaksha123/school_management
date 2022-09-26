@@ -8,6 +8,14 @@ const router = express()
 /**constorllers */
 const employ_controller = require("./controllers/employee_controller")
 const reservation_controller = require("./controllers/reservation_controller")
+const customer_controller = require("./controllers/customer_controller")
+const food_controller = require("./controllers/food_controller")
+const order_controller = require("./controllers/order_controller")
+const vehicle_controller = require("./controllers/vehicle_controller")
+const transport_controller = require("./controllers/transport_controller")
+const wedding_controller = require("./controllers/wedding_controller")
+const room_controller = require("./controllers/room_controller")
+
 
 const db_url = "mongodb://db-itp:u9i7EW85Ez9N2fZRFvHOXTZG8B5jbX5zzMrAcM0ciTYbU11fKVXbOHKiVZzkiQr54Qe8X4XdPqwlDPekPANqFw%3D%3D@db-itp.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@db-itp@"
 const port = 8080
@@ -56,7 +64,13 @@ const StartServer = () => {
    /** Routes */
    router.use("/employee-manager", employ_controller)
    router.use("/reservation_controller", reservation_controller)
-
+   router.use("/customer-controller", customer_controller)
+   router.use("/food-controller", food_controller)
+   router.use("/order-controller", order_controller)
+   router.use("/vehicle-controller", vehicle_controller)
+   router.use("/transport-controller", transport_controller)
+   router.use("/wedding-controller", wedding_controller)
+   router.use("/room-controller", room_controller)
 
    /** Healthcheck */
    router.get('/ping', (req, res, next) => res.status(200).json({ hello: 'world' }));
